@@ -115,6 +115,20 @@ docker stop php-container
 http://docker:8888/
 
 
+
+# Util
+# ##############################################################################
+# To stop all containers
+docker stop $(docker ps -aq)
+
+# To remove all containers
+docker rm $(docker ps -aq)
+
+# To remove all images
+docker rmi $(docker ps -aq)
+
+
+
 # Docker-Compose
 # ##############################################################################
 docker-compose up -d
